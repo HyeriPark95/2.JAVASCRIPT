@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>반복문 : do ~ while문</h3>
+    최소 한번은 수행되는 반복문 작성시 사용함
+    <pre>
+        do{
+            명령문;
+        } (조건);
+    </pre>
+
+    <script>
+        //❓)"stop" 문자열이 입력되기 전까지 입력한 내용을 출력하는 문제
+        let str="";
+        do{
+            str = prompt("입력하세요");
+            document.write(str);
+        }while(str != "stop");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1단 구구단 만들기</h2>
+    <h4>🚩내가 만들고 싶은 모습이 출력되도록 작성</h4>
+    <script>
+        document.write(1+"X"+1+"="+1*1+"<br>");
+        document.write(1+"X"+2+"="+1*2+"<br>");
+        document.write(1+"X"+3+"="+1*3+"<br>");
+        document.write(1+"X"+4+"="+1*4+"<br>");
+        document.write(1+"X"+5+"="+1*5+"<br>");
+    </script>
+    <h4>🚩반복되는 구간이 있는지 확인</h4>
+    <h5>1,2,3,4,5로 1부터; 5까지; 1씩 증가 ;하는 구간이 있음</h5>
+    <script>
+        for(let i=1; i <=5; i++){
+            //증가하는 구간에 숫자대신 i를 입력
+            document.write(1+"X"+i+"="+1*i+"<br>");
+        }
+    </script>
+
+    <h2>3단까지 구구단 만들기</h2>
+    <h4>🚩내가 만들고 싶은 모습 출력되도록</h4>
+    <script>
+        //1단
+        for(let i=1; i <=5; i++){
+            document.write(1+"X"+i+"="+1*i+"<br>");
+        }
+        document.write("<br>");
+        //2단
+        for(let i=1; i <=5; i++){
+            document.write(2+"X"+i+"="+2*i+"<br>");
+        }
+        document.write("<br>");
+        //3단
+        for(let i=1; i <=5; i++){
+            document.write(3+"X"+i+"="+3*i+"<br>");
+        }
+        document.write("<br>");
+    </script>
+
+    <h4>🚩단별로 공통되는 요소가 있음을 확인</h4>
+    <p>1,2,3단 각각 1부터; 3까지 ; 1씩 증가; 하는 구간이 있음</p>
+    <script>
+        for(let n=1; n<=3; n++){
+            for(let i=1; i <=5; i++){
+                //아까 했던 것을 그대로 붙여넣기 해서 단부분의 숫자만 n으로 변경해줌
+            document.write(n+"X"+i+"="+n*i+"<br>");
+            }
+            document.write("<br>");
+        }
+    </script>
+
+</body>
+</html>

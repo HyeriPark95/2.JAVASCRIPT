@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // for(let i=1;i<=3;i++){  
+        //     //변수선언
+        //     let score, grade;
+        //     //입력
+        //     score = prompt("점수를 입력하세요");
+        //     //처리
+        //     if(score>=90){
+        //         grade="A";
+        //     }else if(score>=80){
+        //         grade="B";
+        //     }else if(score>=70){
+        //         grade="C";
+        //     }else{
+        //         grade="F";
+        //     }
+        //     //출력
+        //     alert(grade);
+        // }
+
+
+        //연습문제3
+        let score,grade;
+
+        score=prompt("점수입력")   //최초 입력받는 코드 하나 필요
+        while(score>=0){
+            //처리
+            if(score>=90){
+                grade="A";
+            }else if(score>=80){
+                grade="B";
+            }else if(score>=70){
+                grade="C";
+            }else{
+                grade="F";
+            }
+            //출력
+            alert(grade);
+            score = prompt("점수입력");
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>별하나</h4>
+    <script>
+        document.write("*");
+    </script>
+    <h4>별 다섯</h4>
+    <script>
+        for(let i=1; i<=5; i++){
+            document.write("*");
+        }
+    </script>
+    <h4>별 다섯 세줄</h4>
+    <script>
+        for(let n=1; n<=3; n++){
+            for(let i=1; i<=5; i++){
+            document.write("*");
+        }
+        document.write("<br>")
+        }
+    </script>
+    <h4>늘어나는 별</h4>
+    <script>
+        for(let n=1; n<=3; n++){
+            for(let i=1;i<=n; i++){
+            document.write("*");
+            }
+        document.write("<br>")
+        }
+    </script>
+    <h4>줄어드는 별 방법1</h4>
+    <script>
+        for(let n=3; n>=1; n--){
+            for(let i=n;i>=1; i--){
+            document.write("*");
+            }
+        document.write("<br>")
+        }
+    </script>
+
+    <h4>줄어드는 별 방법2</h4>
+    <script>
+        for(let n=1; n<=3; n++){
+            for(let i=3;i>=(4-n);i--){
+                document.write("*");
+            }
+            document.write("<br>")
+        }
+    </script>
+</body>
+</html>

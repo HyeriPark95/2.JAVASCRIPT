@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>while 반복문</h3>
+    <pre>
+        while(조건) {
+            명령;
+        }
+
+        조건이 만족할 동안 반복하기
+    </pre>
+
+
+    <script>
+        //❓문제: "stop" 문자열이 입력되기 전까지 입력한 내용을 출력하는 문제
+
+        //1.while(조건) {  }
+        //2.while(true) {탈출조건  break; }
+
+        //1.
+        let str =prompt("stop을 입력하세요 1")
+        while(str != "stop"){
+            alert(str);
+            str=prompt("stop을 입력하세요 1");
+        }
+
+        //2.
+        let str1 =prompt("stop을 입력하세요 2")
+        while(true){
+            if(str1=="stop"){
+                break;
+            }else{
+                alert(str1);
+                str1=prompt("stop을 입력하세요 2");
+            }
+        }
+
+        //🟡comment
+        //초기값 주의
+        
+
+
+    </script>
+</body>
+</html>

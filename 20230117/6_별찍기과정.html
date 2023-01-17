@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별찍기 과정정리</title>
+</head>
+<body>
+    <h2>🚩별 다섯개 찍기</h2>
+    <h4>1. 찍고싶은 모양 직접 입력하여 만들기</h4>
+    <script>
+        document.write("*");
+        document.write("*");
+        document.write("*");
+        document.write("*");
+        document.write("*");
+    </script>
+
+    <h4>2. 반복되는 횟수 5번</h4>
+    <p>같은 행동을 5번 하고 나서 멈춤</p>
+    <p>다섯번 (하나, 둘, 셋, 넷, 다섯!) <mark>1부터; 5까지; 1씩증가<mark></p>
+    <script>
+        for(let i=1; i<=5; i++){
+            document.write("*");
+        }
+    </script>
+
+    <h2>🚩별 다섯개씩 세 줄 찍기</h2>
+    <h4>1. 찍고싶은 모양 직접 입력하여 만들기</h4>
+    <script>
+        for(let i=1; i<=5; i++){
+            document.write("*");
+        }
+        document.write("<br>");
+        for(let i=1; i<=5; i++){
+            document.write("*");
+        }
+        document.write("<br>");
+        for(let i=1; i<=5; i++){
+            document.write("*");
+        }
+    </script>
+    <h4>2. 반복되는 횟수 3번</h4>
+    <p>별 다섯개 찍는 for문을 3번 돌리고 멈춤</p>
+    <p>세번(하나, 둘, 셋!) <mark>1부터; 3까지; 1씩증가</mark></p>
+    <p>별 다섯개(i<=5)  /  3번(n<=3)</p>
+    <script>
+        for(let n=1; n<=3; n++){
+            for(let i=1; i<=5; i++){
+            document.write("*");
+        }
+        document.write("<br>");
+        }
+    </script>
+
+    <h2>🚩1개부터 3개까지 늘어나는 별</h2>
+    <h4>1. 찍고싶은 모양 직접 입력하여 만들기</h4>
+    <p>1줄 1별/ 2줄 2별/ 3줄 3별</p>
+    <script>
+        //첫번째줄 1
+        for(let i=1; i<=1; i++){
+            document.write("*");
+        }
+        //두번째줄 2
+        document.write("<br>")
+        for(let i=1; i<=2; i++){
+            document.write("*");
+        }
+        //세번째줄 3
+        document.write("<br>")
+        for(let i=1; i<=3; i++){
+            document.write("*");
+        }
+        document.write("<br>")
+    </script>
+    <h4>2. 반복되는 횟수 3번</h4>
+    <p>1,2,3줄 각각 1부터; 3까지; 1씩 증가; 하는 별이 있음</p>
+    <script>
+        for(let n=1;n<=3; n++){
+            //반복되는 부분은 붙여넣기, 증가하는 숫자부분만 n으로 변경해줌
+            for(let i=1; i<=n; i++){
+            document.write("*");
+            }
+            document.write("<br>")
+        }
+    </script>
+    <h2>🚩3개부터 1개까지 줄어드는 별</h2>
+    <p>1,2,3줄 각각 3부터; 1까지; 1씩 감소; 하는 별이 있음</p>
+    <script>
+        
+    </script>
+
+
+
+</body>
+</html>

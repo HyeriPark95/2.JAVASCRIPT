@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let score,grade;
+
+        while(true){
+            score = prompt("점수 입력");
+            if(score<0) break;  //만약 음수면 그냥 나가고 아니면 아래로 쭉 내려감
+
+            //학점구하기
+            if(score>=90){
+                grade="A";
+            }else if(score>=80){
+                grade="B";
+            }else if(screen>=70){
+                grade="C";
+            }else{
+                grade="F";
+            }
+            //학점 출력하기
+            alert(grade);
+
+        }
+    </script>
+</body>
+</html>

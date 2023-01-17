@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //🚩연습문제2
+        for(let i=1; i<=3; i++){
+            
+            let score= prompt("점수를 입력해주세요")
+
+            if(score>=90){
+                alert("A");
+            }else if(score>=80){
+                alert("B")
+            }else if(score>=70){
+                alert("C");
+            }else{
+                alert("F");
+            }
+
+        }
+
+        //🚩연습문제3
+        let score2= prompt("점수를 입력해주세요")
+        while(score2 >= 0){
+            if(score2>=90){
+                alert("A");
+                score2= prompt("점수를 입력해주세요")
+            }else if(score2>=80){
+                alert("B")
+                score2= prompt("점수를 입력해주세요")
+            }else if(score2>=70){
+                alert("C");
+                score2= prompt("점수를 입력해주세요")
+            }else{
+                alert("F");
+                score2= prompt("점수를 입력해주세요")
+            }
+        }
+        //🟡코멘트
+        //반복되는 구문이 너무 많음!
+        //처리랑 출력이 같이 들어가 있는 구문보다는
+        //점수를 따로 grade라는 변수로 빼주는게 좋음
+        //while안에 if말고 다른 걸 넣을 생각을 못했는데, 
+        //score2 = prompt("점수를 입력해주세요") 구문을
+        //while구문의 맨 아래로 내렸어도 됐었다.
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
