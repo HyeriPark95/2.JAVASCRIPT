@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeImage(){
+            //alert("sfsdf");
+
+            //1.선택한 이미지 정보 얻어오기
+            let selectTag = document.getElementById("selectTag"); //같은 아이디의 요소를 🟧잡아옴
+            let index = selectTag.selectedIndex; //선택한 옵션의 번호 🟩가져옴
+            let optionTag = selectTag.options[index]; //해당 옵션을 🟧잡아옴
+            let optionValue =  optionTag.value;//해당 옵션의 value 값을 🟩가져옴
+
+            //2.이미지태그의 src속성의 값을 변경
+            let imgTag = document.getElementById("imgTag"); //🟧
+            alert(imgTag); 
+            imgTag.src=optionValue; 
+
+            
+            
+        }
+    </script>
+</head>
+<body>
+    그림을 선택하세요
+    <img id="imgTag" src="media/apple.png">
+    <select id="selectTag" onchange="changeImage()">
+        <option>선택하세요</option>
+        <option value="media/apple.png" >사과</option>
+        <option value="media/banana.png" >바나나</option>
+        <option value="media/mango.png" >망고</option>
+    </select>
+</body>
+</html>

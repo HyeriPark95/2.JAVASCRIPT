@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+        }
+
+        div{
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        button{
+            width: 300px;
+            height: 100px;
+            font-size: 30px;
+            font-weight: 700;
+            background-color: cornflowerblue;
+            color: aliceblue;
+            border: 0;
+            border-radius: 30px;
+        }
+        p{  
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            animation: in 0.5s ;
+        }
+        @keyframes in {
+            from{
+                font-weight: 800;
+                width: 500ox;
+                font-size: 100px;
+            }
+            to{
+                font-size: 30px;
+            }
+        }
+
+    </style>
+
+    <script>
+        //❓배열에 학생들 이름을 넣고, '출석 부르기 버튼'을 누르면
+        //배열에 있던 이름들이 하나씩 html부분에 등장하는 프로그램 만들기
+
+        let count=0; //전역변수
+
+        function callName(){  //🚨호출이 끝나면 안의 내용이 전부 날아감
+
+            let names=[ '강병준' , '김민아' ,  '김선명', '김세희' , '박근현' , '박민주' , '박인혜' , '박준성' , '박혜리', '윤성혁' , '이광일' , '이소민' , '이승원' , '이유진' ,'이정현' ,'장의수', '정헌조' ,'조원근' , '조재현' , '차수민', '최범준' , '최인호' , '홍정원'] ;
+            //넣어줄 임의의 p태그 생성 =pTag
+            let pTag = document.createElement("p");
+            //임의의 p태그 안에 내용을 넣어줌
+            pTag.innerHTML = names[count];
+            //id 가 wrap인 요소를 잡아옴
+            let wrap = document.getElementById("wrap");
+            //해당 요소의 자식으로 아까 만든 pTag를 넣어줌
+            wrap.appendChild(pTag);
+
+            //배열 안의 다음 이름으로 넘어가기 위해 count에 1을 더해줌
+            count++;
+
+            //🔴다른 학생들 것 보고 수정한 부분!
+            //출석부른 것이 끝났을 때에, 팝업이 뜨고 다시 초기화 됨
+            if(count>=24){
+                count=0;
+                alert("처음부터 다시 부릅니다!")
+                wrap.innerHTML="";
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    
+<section>
+        <button   onclick="callName()">출석부르기버튼</button>
+    
+    
+        <div id="wrap"></div>
+</section>
+
+</body>
+</html>

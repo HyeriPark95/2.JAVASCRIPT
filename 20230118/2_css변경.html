@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function changeCss(){
+            //alert("skfjlsk");
+            //🚩순서
+            //1. 태그정보 얻어오기(대상선택)
+            let wrap =  document.getElementById("wrap"); //wrap이라는 id를 가진 요소를 잡아와서 wrap변수에 넣음
+            //2. 태그정보 (속성) 얻어오기
+            //3. 태그정보 (속성) 변경하기
+
+
+           wrap.innerHTML="<h2>내용을 변경합니다</h2>"; //wrap div요소 안에 있는 내용을 변경
+           //🔴innerHTML에는 우리가 HTML에서 사용하던 속성들을 사용할 수 있음
+           wrap.style.color="red";  //스타일 바꿔주기
+           wrap.style.border = "1px solid #000000";
+           wrap.style.width = "200px" ;
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <div id="wrap" >
+        내용입니다.
+    </div>
+
+    <button onclick="changeCss()">내용바꾸기</button>
+</body>
+</html>

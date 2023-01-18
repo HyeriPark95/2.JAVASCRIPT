@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        //변수: 값을 한개 저장할 수 있는 공간
+        // let name;
+        // name = "유주연";
+        // document.write(name);
+        // name = "정헌조";
+        // document.write(name);
+
+        //23분
+        //23개의 이름을 저장하려면 23개의 변수 필요함
+        //'강병준' , '김민아' ,  '김선명', '김세희' , '박근현' , 
+        //'박민주' , '박인혜' , '박준성' , '박혜리', '윤성혁' , 
+        //'이광일' , '이소민' , '이승원' , '이유진' ,'이정현' ,'장의수',
+        // '정헌조' ,'조원근' , '조재현' , '차수민', '최범준' , '최인호' ,
+        // '홍정원'
+        let name1, name2, name3, name4, name5, name6, name7, name8, name9, name10, name11, name12, name13, name14, name15, name16, name17, name18, name19 ,name20, name21, name22, name23;
+        name1="강병준";
+        name2="김민아";
+        name3="김선명";
+        name4="김세희";
+        name5="박근현";
+        name6="박민주";
+        name7="박인혜";
+        name8="박준성";
+        name9="박혜리";
+        name10="윤성혁";
+        name11="이광일";
+        name12="이소민";
+        name13="이승원";
+        name14="이유진";
+        name15="이정현";
+        name16="장의수";
+        name17="정헌조";
+        name18="조원근";
+        name19="조재현";
+        name20="차수민";
+        name21="최범준";
+        name22="최인호";
+        name23="홍정원";
+
+        document.write(name1);
+        document.write(name2);
+        document.write(name3);
+        document.write(name4);
+        document.write(name5);
+        document.write(name6);
+        document.write(name7);
+        document.write(name8);
+        document.write(name9);
+        document.write(name10);
+        document.write(name11);
+        document.write(name12);
+        document.write(name13);
+        document.write(name14);
+        document.write(name15);
+        document.write(name16);
+        document.write(name17);
+        document.write(name18);
+        document.write(name19);
+        document.write(name20);
+        document.write(name21);
+        document.write(name22);
+        document.write(name23);
+
+        //🔴배열사용하기, 기억장소(여러개) 를 연속적으로 확보해서 사용하는 것
+        //많은 데이터를 다룰 때 배열을 사용
+        //배열명을 기준으로 해서 요소 하나하나를 접근하는 방법
+        //배열요소접근: 배열명[첨자]
+        //첨자(인덱스)는 0부터 시작됨
+
+        let names = ['강병준' , '김민아' ,  '김선명', '김세희' , '박근현' , '박민주' , '박인혜' , '박준성' , '박혜리', '윤성혁' , '이광일' , '이소민' , '이승원' , '이유진' ,'이정현' ,'장의수', '정헌조' ,'조원근' , '조재현' , '차수민', '최범준' , '최인호' , '홍정원'];
+
+        document.write(names[0]);
+        document.write(names[1]);
+        document.write(names[2]);
+        document.write(names[3]);
+        document.write(names[4]);
+        document.write(names[5]);
+        document.write(names[6]);
+        document.write(names[7]);
+        document.write(names[8]);
+        document.write(names[9]);
+        document.write(names[10]);
+        document.write(names[11]);
+        document.write(names[12]);
+        document.write(names[13]);
+        document.write(names[14]);
+        document.write(names[15]);
+        document.write(names[16]);
+        document.write(names[17]);
+        document.write(names[18]);
+        document.write(names[19]);
+        document.write(names[20]);
+        document.write(names[21]);
+        document.write(names[22]);  //22까지!
+
+
+        //🔴반복문 사용
+        for(i=0; i< names.length; i++){  //길이가 23이니까 23보다 작으면 22까지 감
+            document.write(names[i]);
+        }
+
+
+
+    </script>
+</body>
+</html>

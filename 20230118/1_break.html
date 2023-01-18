@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>break문</h3>
+    반복문을 탈출할 때 사용하는 명령문
+
+    <script>
+        //while문으로 1부터 10까지 합을 구하기
+        let sum=0; //출력변수
+        let n=0;
+        while(true){
+            //특정조건일 때 while문 종료될 수 있도록 break문 필요
+            n++;  //n=n+1
+            sum+= n;    //sum=sum+n
+            if(n>=10) break;
+        }
+
+        alert(sum);
+
+        /*
+        1. 반복
+            -항을 구한다
+            -항을 누적한다
+            -출력
+        2. 항의 누적 출력한다 (다 더해진 값을 한번에 출력)
+        */
+
+    </script>
+
+</body>
+</html>

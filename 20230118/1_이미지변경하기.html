@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //🔴마우스 올라가는 순간 바나나로 바뀌는, 그리고 마우스 out되는 순간 다시 사과로 바뀜
+        function changeImage(){  //call될 떄 실행됨
+            //alert("call");
+            let imgTag = document.getElementById("imgTag");
+            //alert(imgTag);
+            imgTag.src="media/banana.png"; //정보 변경하기
+        }
+
+        function changeImage2(){  //call될 떄 실행됨
+            //alert("call");
+            let imgTag = document.getElementById("imgTag");
+            //alert(imgTag);
+            imgTag.src="/20230118/media/apple.png"; //정보 변경하기
+        }
+
+    </script>
+</head>
+<body>
+    
+    <img id="imgTag" src="media/apple.png" alt="사과 이미지" onmouseover="changeImage()"
+    onmouseout="changeImage2()">
+</body>
+</html>

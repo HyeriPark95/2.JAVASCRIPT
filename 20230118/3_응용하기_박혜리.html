@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box1{
+            width: 500px;
+            height: 500px;
+            border: 1px solid;
+        }
+        #box2{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            left: 0px;
+            top:0px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 100px;
+            border: 1px solid;
+            list-style: none;
+        }
+        li{
+            border: 1px solid;
+            float: left;
+        }
+
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+            font-weight: bold;
+            transform: translate(10px);
+        }
+    </style>
+    <script>
+        let wid = 0;
+        let hei = 0;
+        let stop = "더 이상 갈 수 없습니다."
+        function right(){
+            if(wid<400){
+                wid += 100;
+                let box = document.getElementById("box2");
+                box.style.transform = "translate("+wid+"px,"+hei+"px)";
+            }else{
+                alert(stop);
+            }
+        }
+
+        function bottom(){
+            if(hei<400){
+                hei += 100;
+                let box = document.getElementById("box2");
+                box.style.transform = "translate("+wid+"px,"+hei+"px)";
+            }else{
+                alert(stop);
+            }
+        }
+
+        function left(){
+            if(wid>0){
+                wid -= 100;
+                let box = document.getElementById("box2");
+                box.style.transform = "translate("+wid+"px,"+hei+"px)";
+            }else{
+                alert(stop);
+            }
+        }
+
+        function up(){
+            if(hei>0){
+                hei -= 100;
+                let box = document.getElementById("box2");
+                box.style.transform = "translate("+wid+"px,"+hei+"px)";
+            }else{
+                alert(stop);
+            }
+        }
+
+        //🚨원래는 위로 가는 방향 함수명을 top으로 설정했다.
+        //근데 top부분만 넣으면 계속 오류가 나서 강사님께 SOS침
+        //개발자모드 들어가서 콘솔창보면 Uncaught SyntaxError: Identifier 'top' has already been declared
+        //이런 메시지가 뜨는데, top이라는 변수은 사용불가한 함수라서 안되는 것이었음
+        
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <div id="box2"></div>
+    </div>
+    <ul>
+    <li><button onclick="right()" id="right">▶</button></li>
+    <li><button onclick="bottom()" id="bottom">▼</button></li>
+    <li><button onclick="left()" id="left">◀</button></li>
+    <li><button onclick="up()" id="up">▲</button></li>
+    </ul>
+</body>
+</html>
