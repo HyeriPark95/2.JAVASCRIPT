@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 🔴버튼에 위치주기 -->
+    <!-- ❓본인이 원하는 갤러리 만들기 -->
+    <style>
+        #gallery{
+            margin: 0 auto;
+            width: 600px;
+            height: 400px;
+            position: relative;
+            background-image: url("/20230125/media/1.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        .btn{
+            /* border: 1px solid black; */
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;  /*📌이렇게 높이랑 동일하게 해주면 가운데로 옴*/
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            color: aliceblue;
+            cursor: pointer;
+            text-shadow: 2px 2px 2px gray;
+        }
+        .leftBtn{
+            position: absolute;
+            left: 10px;
+            top: 170px;
+        }
+        .rightBtn{
+            position:absolute;
+            right: 10px;
+            top: 170px;
+        }
+        .boxs{
+            display: flex;
+            position: absolute;
+            bottom: 5px;
+            left: 45%;
+        }
+        .box{
+            margin: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgb(252, 252, 252);
+        }
+        
+    </style>
+    <script>
+        let index=0;
+        let imgNames = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"];
+        function right(){
+            index++;
+            if(index>=imgNames.length){
+                index=0;
+            }
+            let img= document.getElementById("gallery");
+            img.style.backgroundImage="url(/20230125/media/"+imgNames[index]+")";
+            let box= document.getElementById("""+index+""");
+            box.backgroundColor="red";
+
+        }
+
+        function left(){
+            index--;
+            if(index<0){
+                index=imgNames.length-1;
+            }
+            let img= document.getElementById("gallery");
+            img.style.backgroundImage="url(/20230125/media/"+imgNames[index]+")";
+        }
+    </script>
+</head>
+<body>
+    <div id="gallery">
+        <div onclick="left()" class="btn leftBtn"><</div>
+        <div onclick="right()" class="btn rightBtn">></div>
+        <div class="boxs">
+            <div class="box box1" id="1"></div>
+            <div class="box box2"></div>
+            <div class="box box3"></div>
+            <div class="box box4"></div>
+            <div class="box box5"></div>
+        </div>
+    </div>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+            
+        }
+    </style>
+    <script>
+        let index=0;   //📌전역변수로 박기
+        let imgNames=["apple.png","banana.png","beach.png","Koala.png","mango.png"];
+        function chageImage(){
+            let imgGallery = document.getElementById("imgGallery");
+            imgGallery.src="/20230125/media/"+imgNames[index];
+            index++;
+            if(index>=imgNames.length){
+                index=0;
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+
+    <img id="imgGallery" src="/20230125/media/Chrysanthemum.png" alt="">
+    <button onclick="chageImage()">다음</button>
+</body>
+</html>

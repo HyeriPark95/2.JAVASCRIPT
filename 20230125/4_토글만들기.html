@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function toggle(){
+            let btn = document.getElementById("wrap");
+            if(btn.style.display=="block"){   //🟡이건 안먹힘! alert해보면 block안먹힘
+                btn.style.display="none";
+            }else{
+                btn.style.display="block";
+            }
+        } //🟡되는 것처럼 보여도 첫번째 누를때 안먹힘
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <button onclick="toggle()">보이기/안보이기</button>
+    <div id="wrap">
+        공간 내용
+    </div>
+</body>
+</html>

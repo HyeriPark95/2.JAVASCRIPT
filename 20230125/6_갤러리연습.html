@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gallery{
+            width: 300px;
+            height: 300px;
+            border: 3px solid black;
+            background-image: url(/20230125/media/apple.png);
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script>
+        //배열에 이미지 정보를 담아주기
+        let index=0;   //📌전역변수로 박기
+        let imgNames=["apple.png","banana.png","beach.png","Koala.png","mango.png"];
+        function changeImage(){
+            //대상선택
+            let gallery = document.getElementById("gallery");
+            index++;  //마지막 값이 나온 순간 다시 0으로 돌아감
+            if(index>=imgNames.length){
+                index=0;
+            }
+            gallery.style.backgroundImage = "url(/20230125/media/"+imgNames[index]+")";
+
+            
+
+        }
+    </script>
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="gallery">
+        </div>
+        <button onclick="changeImage()">다음</button>
+    </div>
+
+</body>
+</html>

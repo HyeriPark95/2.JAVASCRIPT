@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let hide=false;  //🟡요렇게 장치를 만들어 둘 수 있음
+        function toggle(){
+            let btn = document.getElementById("wrap");
+
+            if(hide==false){
+                btn.style.display = "none";
+                hide=true;
+            }else{
+                btn.style.display = "block";
+                hide=false;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="toggle()">보이기/안보이기</button>
+    <div id="wrap">
+        공간 내용
+    </div>
+</body>
+</html>
