@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //🔴객체정보 안에 배열도 넣을 수 있음
+        let movie = {title:"곡성",actor:["황정민","이정재","박정민"]};
+
+        console.log(movie.actor); //황정민, 이정재, 박정민
+        console.log(movie.actor[2]);   //박정민
+
+        //🔴객체안에 객체를 넣을 수도 있음
+        //검색할 때에는 .을 통해서 검색
+        let cat2={name:"뽀삐",eye:{홍채:1,망막:1}};
+        console.log(cat2.eye.망막);
+
+    </script>
+</body>
+</html>

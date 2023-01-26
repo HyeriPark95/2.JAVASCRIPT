@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function checkid(){
+            let msg = document.querySelector("#msg"); 
+            msg.innerHTML = "사용가능한 아이디입니다."
+            //document.querySelectorAll();  //결과값을 배열로 가져옴
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="userid" onblur="checkid()"> <span id="msg"></span>
+</body>
+</html>

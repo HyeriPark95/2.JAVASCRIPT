@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>사용자정의 객체타입 만들기</h3>
+    <script>
+        // 책정보, 스낵정보, 영화정보, 고객정보 등
+
+        // 자바스크립트 객체 (object) 만들기, json형식이라고 함
+
+        /*
+        객체: 다양한 값을 하나의 단위로 구성한 복합적인 자료구조
+        실제 우리가 관심있어 하는 값들은 하나로 구성된 것보다 다양한 값으로 구성된
+        형태의 객체들이 대부분이다.
+
+        고객정보, 책정보, 영화정보 (하나의 값이 아니라 여러값으로 구성됨)
+        예) 스낵 : 이름, 가격, 무게, 칼로리 등으로 이루어져 있다.
+
+        객체: 속성 + 메서드로 구성되어 있다.
+        */
+
+
+        let snack={title: "맛동산",price: 3800};
+
+        console.log(snack.title);
+
+        let movie={title:"바람과함께 사라지다", category:"로맨스"};
+        console.log(movie.title)
+        console.log(movie.category);
+
+        snack.title="맛동산2";
+        console.log(snack.title);
+        console.log(snack);
+
+        //
+
+        let banana ={name:"바나나", color:"노란색",price:"4000"};
+        let strawberry = {name:"딸기",color:"빨강색",price:"7000"};
+        let watermelon = {name:"수박",color:"초록색",price:"18000"};
+
+        console.log(banana.name,banana.color);
+        console.log(strawberry.name,strawberry.color);
+        console.log(watermelon.name,watermelon.color);
+
+        console.log(banana.name+"의 색상은 "+banana.color+"입니다.")
+        console.log(strawberry.name+"의 색상은 "+strawberry.color+"입니다.")
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcAmt(obj){
+            alert(obj);
+
+
+            let price = obj.value;
+            //수량
+            let priceTag = obj.parentElement;
+            console.log(priceTdTag);
+            let qtyTdTag= priceTdTag.previousElementSibling;
+            console.log(qtyTdTag);
+            let qty = qtyTdTag.firstElementChild;
+            console.log(qty.value);
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>제품</td>
+            <td>수량</td>
+            <td>단가</td>
+            <td>금액</td>
+        </tr>
+        <tr>
+            <td><input type="text" id="" value="빼뺴로"></td>
+            <td><input type="text" id=""></td>
+            <td><input type="text" onkeyup="calcAmt(this)" id=""></td>
+            <td><input type="text" id=""></td>
+        </tr>
+    </table>
+</body>
+</html>

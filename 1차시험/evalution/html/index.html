@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 🚩 */
+        header{
+            position: relative;
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            /* border: 1px solid red; */
+        }
+        .title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .search{
+            border: 1px solid gray;
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            height: 35px;
+            width: 200px;
+        }
+        .search img{
+            width:40px;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+        }
+        .search input{
+            /* 🚨커서올렸을 때에 라인 없애는 방법 모르겠음 */
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            border: none;
+            width: 150px;
+            height: 30px;
+        }
+        /* 🚩 */
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+            /* border: 1px solid blue; */
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+        }
+        /* 🚩 */
+        section{
+            height: 600px;
+            /* border: 1px solid black; */
+        }
+        section ul{
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0 auto;
+        }
+        section li{
+            width: 300px;
+            padding: 20px;
+            border: 0.5px solid rgb(255, 241, 241);
+            text-align: center;
+            font-size: 15px;
+        }
+        li img{
+            width: 200px;
+            height: 220px;
+        }
+        .name{
+            width: 130px;
+            padding: 10px;
+            color: red;
+            background-color: black;
+        }
+        /* 🚩 */
+        footer{
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            /* border: 1px solid orange; */
+        }
+        .item{
+            width: 33%;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="/images/logo.png" alt="">
+        </div>
+        <div class="search">
+            <input type="text">
+            <img src="/images/검색.png" alt="">
+        </div>
+    </header>
+    <nav>
+        <a href="login.html">로그인</a>
+        <a href="joinus.html">회원가입</a>
+        <a href="index.html">홈으로</a>
+    </nav>
+    <section>
+        <ul>
+            <li>
+                <div class="name">bigdata</div>
+                <img src="/images/img01.png" alt="">
+                <p>프로젝트 기반 빅데이터분석 과정</p>
+            </li>
+            <li>
+                <div class="name">Android</div>
+                <img src="/images/img01.png" alt="">
+                <p>프로젝트 기반 빅데이터분석 과정</p>
+            </li>
+            <li>
+                <div class="name">Front</div>
+                <img src="/images/img01.png" alt="">
+                <p>프로젝트 기반 빅데이터분석 과정</p>
+            </li>
+        </ul>
+    </section>
+    <footer>
+        <div class="item"><img src="/images/footer_acorn.png" alt=""></div>
+        <div class="item">
+            <p>(주)에이콘이즈 에이콘아카데미(홍대)</p>
+        </div>
+        <div class="item">
+            <p>COPYRIGHT(C) ALL RIGHT RESERVED</p>
+        </div>
+    </footer>
+</body>
+</html>

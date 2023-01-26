@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>❓1부터 10까지의 합을 출력</h3>
+    <script>
+        function printTenTotal(){
+            let sum=0;
+            for(let i=1;i<=10;i++){
+                sum+=i;
+            }
+            document.write("1부터 10까지의 합: "+sum);
+        }
+
+        printTenTotal();
+    </script>
+    <h3>❓1부터 10까지의 합을 반환</h3>
+    <script>
+        function getTenTotal(){
+            let sum=0;
+            for(let i=1;i<=10;i++){
+                sum+=i;
+            }
+            return sum;
+        }
+
+        document.write("1부터 10까지의 합: "+getTenTotal());
+    </script>
+    <h3>❓수를 매개변수로 받아 1부터 그 수까지의 합을 출력</h3>
+    <script>
+        function printTenTotal2(max){
+            let sum=0;
+            for(let i=1;i<=max;i++){
+                sum+=i;
+            }
+            document.write("1부터 "+max+"까지의 합: "+sum);
+        }
+
+        printTenTotal2(20);
+    </script>
+    <h3>❓수를 매개변수로 받아 1부터 그 수까지의 합을 반환</h3>
+    <script>
+        function getTenTotal2(max){
+            let sum=0;
+            for(let i=1;i<=max;i++){
+                sum+=i;
+            }
+            return sum;
+        }
+        
+        document.write("1부터 20까지의 합: "+getTenTotal2(20));
+    </script>
+
+    <h3>❓나만의 함수 만들기</h3>
+    <p>둘 중 더 큰수를 출력하는 함수</p>
+
+    <script>
+        //🟡처음에 출력이 겹쳐나왔었음
+        function max(num1,num2){
+            let max=0;
+            if(num1>num2){
+                max=num1;
+                document.write(num1+"과 "+num2+" 둘 중 더 큰 수: "+max);
+            }else if(num1==num2){
+                document.write("두 수가 같습니다.")
+            }else{
+                max=num2;
+                document.write(num1+"과 "+num2+" 둘 중 더 큰 수: "+max);
+            }
+        }
+        max(10,14);
+    </script>
+</body>
+</html>

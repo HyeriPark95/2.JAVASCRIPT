@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function calcAmt(){
+            // alert("dkfkfkfkfk");
+            //태그정보 얻어오기
+            let qtyTag  = document.querySelector("#qty");
+            let priceTag = document.querySelector("#price");
+            let  amtTag = document.querySelector("#amt");
+
+            //태그 속성중에서 value 속성 얻어오기
+            let qty = qtyTag.value;     // 12  숫자입력=> "12"  => 12
+            let price = priceTag.value;
+
+            //금액구하기  //  parseInt("12")  => 12 
+            let amt = parseInt(qty)* parseInt(price);
+
+            //금액태그에 value 속성이용해서 구한금액 설정하기 
+            amtTag.value  = amt; 
+                        
+            console.log( qtyTag);
+            console.log(  priceTag);
+            console.log( amtTag);
+
+            console.log( qty);
+            console.log(  price);
+            console.log( amt);
+
+        }
+    </script>
+</head>
+<body>
+
+    수량<input type="text"  id="qty">    단가<input type="text"  id="price" >    <input type="text" id="amt"> <br>
+
+    <button onclick="calcAmt()">계산하기</button>    
+</body>
+</html>

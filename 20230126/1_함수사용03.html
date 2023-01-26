@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>함수</h3>
+
+    <script>
+        //🔴더하기 기능 만들기
+        // 기능: 더하는 기능
+        // 입력: 두 정수
+        // 반환값: 두 수를 더한 값
+
+        //함수에서 사용되는 변수는 지역변수로 함수가 반환될 때 전부 사라짐!
+
+        function adder(num1,num2){  //매개변수 let num1, let num2쓸 수 없음
+            let sum = num1+num2;    
+            return sum;  //sum변수는 더이상 존재하지 않음
+
+        }
+
+        let sum = adder(3,5);
+        alert(sum);
+
+        let sum2 = 3+5;
+
+
+    </script>
+    
+</body>
+</html>

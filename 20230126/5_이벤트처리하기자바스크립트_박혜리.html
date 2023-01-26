@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //🔴html안건드리고 자바스크립트에서 이벤트 처리하기
+        function msg(){
+            alert("클릭되었어");
+        }
+
+        function change1(){
+            //아이디 값으로 바로 선택이 안됨!
+            change.style.color="red";
+        }
+    </script>
+</head>
+<body>
+
+
+    <button id="btn1">버튼</button>
+    <button id="btn2">버튼</button>
+    <button id="change-1">바꾸기</button>
+    <button id="change2">바꾸기2</button>
+
+    <!-- 🚨자바스크립트를 위로 두면 html에 접근이 안될 것 -->
+    <script>
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        // alert(btn1);
+        btn1.addEventListener("click",msg); //이벤트이름, 수행할 코드(🔴함수형태로 괄호없이)
+        //익명함수(일회성 함수 넣기)
+        btn2.addEventListener("click",function(){alert("클릭됨")}); 
+        
+
+        //
+        let change  = document.getElementById("change-1");
+        change.addEventListener("click",change1)
+
+        let change2 = document.getElementById("change2");
+        change2.addEventListener("click",function(){
+            change2.style.color="brown";
+        });
+
+
+    </script>
+
+</body>
+</html>

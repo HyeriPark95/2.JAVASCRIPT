@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 변수선언
+        // 선언한 변수사용할 수 있는 사용범위: 유효범위
+        // 변수는 지역성을 갖고있음
+        for(let i=1;i<=5;i++){
+            document.write(i+"hi");
+        }
+
+        //for반복문 종류
+        document.write("i값 출력="+i);  //🚨출력하려고 하면 i는 지역변수였기 때문에 값이 없어서 오류남
+    </script>
+</body>
+</html>
