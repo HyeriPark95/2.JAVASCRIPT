@@ -8,38 +8,34 @@
 </head>
 <body>
     <script>
-        let book={title:"어린왕자",
-                    price: 7000,
-                    author: "앙투안 드 생텍쥐페리",
-                    publisher: "갈리마르"
-                    
-                };
+            //🟧변수로 하나씩 전달
+            function showBookInfo(a,b,c,d){
+                document.write("책정보 출력<br>");
+                document.write(a);
+                document.write(b);
+                document.write(c);
+                document.write(d);
+            }
 
-                //변수로 하나씩 전달
-                function showBookInfo(a,b,c,d){
-                    document.write("책정보 출력");
-                    document.write(a);
-                    document.write(b);
-                    document.write(c);
-                    document.write(d);
-                }
+            //🟧변수로 하나씩 전달
+            showBookInfo("어린왕자",7000,"앙투안 드 생텍쥐페리","갈리마르");
 
-                //객체로 한번에 전달
-                function showBookInfo2(a){
-                    document.write("책정보출력<br>");
-                    // document.write(book.title);
-                    document.write(book["title"]);  //이렇게도 불러올 수 있음
-                    document.write(book.price);
-                    document.write(book.author);
-                    document.write(book.publisher);
-                }
 
-                //변수로 하나씩 전달
-                showBookInfo("어린왕자",7000,"앙투안 드 생텍쥐페리","갈리마르");
-
-                let mybook ={title: "어린왕자", price:7000 ,author: "앙투안 드 생텍쥐페리",publisher: "갈리마르"};
-                //객체로 한번에 전달
-                showBookInfo2(mybook);
+            //----------------------------------------------------------------------
+            
+            //🟩객체로 한번에 전달
+            function showBookInfo2(book){  //🔴book = mybook객체
+                document.write("책정보출력<br>");
+                // document.write(book.title);
+                document.write(book["title"]);  //이렇게도 불러올 수 있음
+                document.write(book.price);
+                document.write(book.author);
+                document.write(book.publisher);
+            }
+            //mybook이라는 객체를 생성
+            let mybook ={title: "어린왕자", price:7000 ,author: "앙투안 드 생텍쥐페리",publisher: "갈리마르"};
+            //🟩객체로 한번에 전달
+            showBookInfo2(mybook);
         
     </script>
 </body>

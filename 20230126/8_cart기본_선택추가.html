@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 15px;
+        }
+        img{
+            width: 100px;
+        }
+        caption{
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+            font-weight: 600;
+        }
+        table{
+            margin:0 auto;
+        }
+        th{
+            background-color: rgb(85, 117, 149);
+            font-size: 14px;
+            color: aliceblue;
+            font-weight: 500;
+            padding: 10px;
+        }
+        td{
+            height: 40px;
+        }
+
+        .right{
+            text-align: right;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .fix{
+            height: 25px;
+            border: 0px;
+            text-align: center;
+        }
+    </style>
+    <script>
+        //🚩금액구하기
+        function calcAmt(obj){  //단가 input끌고옴
+            let price = obj.value;  //해당input의 값을 가격으로으로 넣음
+            //다음 input을 찾기 위해 부모 먼저 찾음(td)
+            let priceTag = obj.parentElement;
+            console.log(priceTag);
+            //부모의 이전 형제 찾아줌(td)
+            let qtyTag = priceTag.previousElementSibling;
+            console.log(qtyTag);
+            //수량 값 구하기
+            let qty = qtyTag.firstElementChild.value
+            console.log(qty);
+            //금액 input찾아서 value넣어주기
+            let totalTag = priceTag.nextElementSibling;
+            console.log(totalTag);
+            totalTag.firstElementChild.value= price*qty;
+
+            totalSum();
+
+        }
+        //🚩결제예정금액 계산
+        function totalSum(){
+            let allTotal=0;
+            let totalTag= document.querySelectorAll("#total");
+            let allTotalTag=document.querySelector("#allTotal");
+            for(let i=0;i<totalTag.length;i++){
+                total=parseInt(totalTag[i].value);
+                if(isNaN(total)==false){
+                    allTotal+=total;
+                }
+            }
+            allTotalTag.value=allTotal;
+        }
+
+        //🚩선택삭제 기능
+        function checkRemove(){
+            let checkbox = document.querySelectorAll("#check");
+            let tbody = document.querySelector("tbody");  //removeChild하기 위해 tr 부모 끌고옴
+            for(let i=0;i<checkbox.length;i++){
+                if(checkbox[i].checked==true){
+                    // alert(checkbox[0]);
+                    checkedbox = checkbox[i];
+                    let tr = checkedbox.parentElement.parentElement;
+                    tbody.removeChild(tr);
+                }
+            }
+            totalSum();
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <caption>장바구니</caption>
+        <tbody>
+            <tr>
+                <th>선택</th>
+                <th>제품</th>
+                <th>수량</th>
+                <th>단가</th>
+                <th>금액</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="check">선택</td>
+                <td><input type="text" id="name" class="fix" value="빼빼로"></td>
+                <td><input type="text" id="qty"></td>
+                <td><input type="text" onkeyup="calcAmt(this)" id="price"></td>  <!--여기서의 this는 input태그임-->
+                <td><input type="text" id="total"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="check">선택</td>
+                <td><input type="text" id="name" class="fix" value="맛동산"></td>
+                <td><input type="text" id="qty"></td>
+                <td><input type="text" onkeyup="calcAmt(this)" id="price"></td>  <!--여기서의 this는 input태그임-->
+                <td><input type="text" id="total"></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" id="check">선택</td>
+                <td><input type="text" id="name" class="fix" value="말랑카우"></td>
+                <td><input type="text" id="qty"></td>
+                <td><input type="text" onkeyup="calcAmt(this)" id="price"></td>  <!--여기서의 this는 input태그임-->
+                <td><input type="text" id="total"></td>
+            </tr>
+        </tbody>
+        <tr>
+            <td><button onclick="checkRemove()">선택삭제</button></td>
+            <td class="right" colspan="3">결제예정금액</td>
+            <td><input type="text" id="allTotal" class="fix"></td>
+        </tr>
+    </table>
+</body>
+</html>

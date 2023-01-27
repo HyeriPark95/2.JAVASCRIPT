@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 50px;
+            height: 50px;
+            background-color: violet;
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h3>button클릭하면 박스 움직임</h3>
+    <button id="up">위로</button>
+    <button id="down">아래로</button>
+    <button id="left">왼쪽으로</button>
+    <button id="right">오른쪽으로</button>
+    <button id="color">색변경</button>
+
+
+    <div id="box"></div>
+    
+
+    <script>
+        //🚨꼭 요소 가져와주기
+        let up = document.getElementById("up");
+        let down = document.getElementById("down");
+        let left = document.getElementById("left");
+        let right = document.getElementById("right");
+        let box = document.getElementById("box");
+        let color = document.getElementById("color");
+        let x=300;
+        let y=300;
+        up.addEventListener("click",function(){
+            y=y-20;
+            box.style.top=y+"px";
+        })
+        down.addEventListener("click",function(){
+            y=y+20;
+            box.style.top=y+"px";
+        })
+        left.addEventListener("click",function(){
+            x=x-20;
+            box.style.left=x+"px";
+        })
+        right.addEventListener("click",function(){
+            x=x+20;
+            box.style.left=x+"px";
+        })
+
+        color.addEventListener("click",function(){
+            let usercolor = prompt("색을 입력해주세요(영어)") //입력해준게 문자였으니까
+            box.style.backgroundColor=usercolor;  //따로 따옴표 안해줘도 입력됨
+        })
+    </script>
+
+</body>
+</html>

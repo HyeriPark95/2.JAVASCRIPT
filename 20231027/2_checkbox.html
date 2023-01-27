@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function delCount(){
+            //checkbox checked 속성을 가지고 있음,
+            //체크가 되면 true, 아니면 false
+
+            //1.태그정보 얻어오기
+            let checkboxs = document.querySelectorAll("input[type='checkbox']")   //한개를 찾아와도 배열로 줌
+            console.log(checkboxs.length);
+            let body = document.querySelector("body");
+
+            //체크된 체크박스만 가져오기
+
+            //🟡요것 때문에 값이 없어서 오류가 났었음
+            // console.log(checkboxs[0].checked);
+            // console.log(checkboxs[1].checked);
+            // console.log(checkboxs[2].checked);
+            // console.log(checkboxs[3].checked);
+            // console.log(checkboxs[4].checked);
+
+            for(let i=0; i<checkboxs.length;i++){
+                if(checkboxs[i].checked == true){
+                    body.removeChild(checkboxs[i]); //부모로부터 지움 , 그냥 본인을 지우는 건 없나
+
+                }
+            }
+        }
+    </script>   
+</head>
+<body>
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+    <input type="checkbox">
+
+    <button onclick="delCount()">산택삭제</button>  <!--체크된 것만 삭제-->
+</body>
+</html>

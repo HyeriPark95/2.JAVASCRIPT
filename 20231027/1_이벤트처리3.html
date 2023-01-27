@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+    </script>
+</head>
+<body>
+    <button id="btn1">버튼</button>
+    <button id="btn2" >버튼2</button>
+
+    <script>
+        //🔴그냥 일반함수로 이벤트감지
+        let btn1 = document.getElementById("btn1");
+        btn1.addEventListener("click",showMsg);
+
+        function showMsg(){
+            alert("클릭되었어");
+        }
+
+        //🔴익명함수로 이벤트감지
+        let btn2 = document.querySelector("#btn2");
+        btn2.addEventListener("click",function(){
+            alert("오른쪽 버튼 클릭되었어");
+        })
+    </script>
+
+</body>
+</html>

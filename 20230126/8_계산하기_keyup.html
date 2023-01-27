@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        //🔴계산하기 버튼 없애고, 단가 input에 value값 입력되면 자동으로 합계 채워지도록
         function calcAmt(){
             // alert("dkfkfkfkfk");
             //태그정보 얻어오기
@@ -35,9 +36,7 @@
     </script>
 </head>
 <body>
-
-    수량<input type="text"  id="qty">    단가<input type="text"  id="price" onkeyup="calcAmt()" >    <input type="text" id="amt"> <br>
-
-    <button onclick="calcAmt()">계산하기</button>    
+    <!-- 🔴onkeyup : value가 입력된 후에 해당 함수가 실행됨 -->
+    수량<input type="text"  id="qty">    단가<input type="text"  id="price" onkeyup="calcAmt()" >   합계: <input type="text" id="amt"> <br>   
 </body>
 </html>

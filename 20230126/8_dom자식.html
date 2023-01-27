@@ -7,9 +7,10 @@
     <title>Document</title>
     <script>
 
-        //🟡잘 안됨
-        function selecChild(){
-            document.querySelector("#acorn");
+        //🟡처음엔 잘 안됨
+        // 이게 자동 완성이 안되어서 오류가 잘 남
+        function selectChild(){
+            let acorn = document.querySelector("#acorn");
 
             let c1 = acorn.firstElementChild;
             alert(c1.innerHTML);
@@ -20,7 +21,7 @@
             let c3 = c2.nextElementSibling;
             alert(c3.innerHTML);
 
-            let c4 = acorn.lastElemnetChild;
+            let c4 = acorn.lastElementChild;
             alert(c4.innerHTML);
 
         }
@@ -32,10 +33,9 @@
         <p>과정2</p>
         <p>과정3</p>
         <p>과정4</p>
-        <p>과정5</p>
 
     </div>
 
-    <button onclick="selecChild()">클릭</button>
+    <button onclick="selectChild()">클릭</button>
 </body>
 </html>

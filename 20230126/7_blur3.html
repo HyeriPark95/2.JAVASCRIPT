@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        //🔴함수로 만들어줘서 먼저 읽히지 않고, html중간에 call될 수 있도록 함
         function init(){
             let userid = document.querySelector("#userid");
             let msg = document.querySelector("#msg");
@@ -17,7 +18,7 @@
         }
     </script>
 </head>
-<body onload="init()">
+<body onload="init()">  <!--onload를 사용하고 있음-->
     <input type="text" id="userid"> <span id="msg"></span>
 
 </body>

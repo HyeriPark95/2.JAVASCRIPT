@@ -9,6 +9,7 @@
         // 
         //🔴원래는 이렇게 위에 있으면 body를 아직 읽지 않았기 때문에
         //오류가 나지만!!!
+        //a라는 함수로 묶어준 후에 이 a가 html까지 전부 load된 후에 실행 될 수 있도록 하면 됨
         function a(){
             let btn1=document.getElementById("btn1");
             btn1.addEventListener("click",function(){

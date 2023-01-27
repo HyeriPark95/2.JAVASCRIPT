@@ -19,6 +19,16 @@
         let cat2={name:"뽀삐",eye:{홍채:1,망막:1}};
         console.log(cat2.eye.망막);
 
+        //🔴심지어 함수(메소드)도 넣을 들어감!
+        let person= {
+            name: "박혜리",
+            age: 29,
+            greeting: function(){
+                alert("안녕하세요! "+this.name+"입니다.");    //안녕하세요! 박혜리입니다.
+            }
+
+        }
+
     </script>
 </body>
 </html>

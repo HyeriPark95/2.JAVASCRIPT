@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //2초에 한번 안녕
+        // function callbtn(){
+        //     setInterval( hi ,2000 )
+        // }
+
+        // function hi(){
+        //     alert("안녕");
+        // }
+
+        //function을 안쓰고 setinterval사용하기 
+        function callbtn(){
+            setInterval(() => {
+                alert("안녕");
+            }, 2000);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="callbtn()">2초마다 안녕</button>
+</body>
+</html>

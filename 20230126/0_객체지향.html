@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    const person = {
+        name: {
+            first:'Bob ',
+            last: 'Smith'
+        },
+        age: 32,
+        gendet: 'male',
+        interest: ['music','skiing'],
+        bio: function(){
+            alert(this.name.first+this.name.last+' is '+this.age+' years old. He likes '
+            +this.interest[0]+' and '+this.interest[1]+'.'
+            );
+        },
+        greeting: function(){
+            alert("Hi! i'm"+this.name.first+".");
+        }
+
+    };
+
+</script>
+</html>

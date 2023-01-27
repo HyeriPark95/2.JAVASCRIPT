@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery{
+            height: 50px;
+
+        }
+    </style>
+
+    <script>
+        //🔴클릭하면 혼자서 돌아가는 텍스트 갤러리 만들기
+        let texts=[];  //3개 텍스트내용, 영하18도 , 따뜻하게 입으세요 , 빙판길주의
+        let index =0;
+        function init(){
+            let items = document.querySelectorAll(".slide-wrap .gallery div");
+            for (let i=0;i<items.length;i++){
+                texts[i] = items[i].innerHTML;
+            }
+            console.log(texts);
+
+            //📌
+            setInterval( changeText, 2000 );  //(수행코드[함수형태] , 시간)
+        }
+
+        function changeText(){
+            let gallery= document.querySelector(".slide-wrap .gallery");
+            gallery.innerHTML = texts[index];
+            index++;
+            if(index>=3){
+                index=0;
+            }
+
+            //🔴애니메이션 효과 주기
+            gallery.animate( {
+                    transform: [                          /* transform   translate 위치 이동 */
+                    'translateY(100%)',    //시작
+                    'translateY(0px)'      //도착
+                    ]
+                 },
+                 {
+                     duration:1000               // 위의효과가 1초간 지속되도록
+                 });
+        }
+        
+    </script>
+
+</head>
+<body onload="init()">
+    
+    <div class="slide-wrap">
+        <div class="gallery">
+            <div>영하18도</div>
+            <div>따뜻하게 입으세요</div>
+            <div>빙판길주의</div>
+        </div>
+    </div>
+
+
+    </script>
+</body>
+</html>

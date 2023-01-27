@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        // 🔴자바스크립트에서 blur적용 (load이용하여 맨 나중에 읽히도록 함)
         window.addEventListener("load", function(){
             let userid=document.querySelector("#userid");
             userid.addEventListener("blur",function(){
@@ -13,7 +14,8 @@
                 msg.innerHTML="사용가능한 아이디"
             });   
         });
-
+        // 🟡요거 처음에 요소를 잘못선택해서 애먹었다. 
+        // blur이벤트를 받는 곳과 이벤트로 인해 변경되는 부분이 다름
     </script>
 </head>
 <body>

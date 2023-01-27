@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //주문 합계 금액 구하기
+        function calsum(a) {
+            let qty = a.value; // 수량
+            let pricetag = a.parentElement.previousElementSibling;
+            let amountTag = a.parentElement.nextElementSibling;
+            let price = pricetag.innerHTML;
+            amountTag.innerHTML = price * qty; 
+
+            calcTotal();
+        }
+
+
+        //전체금액합계구하기
+        function calcTotal(){
+
+            //누적합 
+            /*
+             
+               1. 반복 (tr전체)
+                  -각 tr정보얻어오기
+                  -각 tr의 마지막 자식 td정보 얻어오기
+                  -td안의 내용얻어오기 (금액)
+                  -금액을 누적하기
+                
+                2. 합계금액 변경하기
+            */
+
+            let trs = document.querySelectorAll("tbody tr");
+           /// alert( trs.length);
+            let sum=0;
+            for( let i=0 ; i< trs.length ; i++){
+                 let tr= trs[i];
+                 let amt=  parseInt(tr.lastElementChild.innerHTML) ;
+                 sum += amt;  // sum = sum +amt
+            }
+            let order_price  =  document.querySelector("#order-price");
+            order_price.innerHTML =  sum;          
+
+            /*
+            let tr1 = trs[0];
+            let amt1=  parseInt(tr1.lastElementChild.innerHTML) ;
+
+            let tr2= trs[1];
+            let amt2= parseInt(tr2.lastElementChild.innerHTML);
+
+            let  tr3 = trs[2]; 
+            let amt3 = parseInt(tr3.lastElementChild.innerHTML);
+
+            let tmp=  amt1+amt2+amt3 ;
+          //  alert(tmp);
+             let order_price  =  document.querySelector("#order-price");
+            order_price.innerHTML =  tmp;
+*/
+
+         
+
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <button  onclick="calcTotal()">합계금액구하기</button>
+    <table>
+        <caption> 주문서 </caption>
+        <thead>          
+            <tr>
+                <th>상품명</th>
+                <th>가격</th>
+                <th>구매수량</th>
+                <th>합계</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>아메리카노</td>
+                <td>2000</td>
+                <td><input type="text" value="1" onkeyup="calsum(this)"></td>
+                <td>2000</td>
+            </tr>
+
+            <tr>
+                <td>딸기스무디</td>
+                <td>4000</td>
+                <td><input type="text" value="1" onkeyup="calsum(this)"></td>
+                <td>4000</td>
+            </tr>
+
+            <tr>
+                <td>망고스무디</td>
+                <td>5000</td>
+                <td><input type="text" value="1" onkeyup="calsum(this)"></td>
+                <td>5000</td>
+            </tr>
+        </tbody>        
+    </table>
+
+
+    합계 :  <span id="order-price">10000</span>
+
+</body>
+
+</html>
