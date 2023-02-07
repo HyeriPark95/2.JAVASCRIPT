@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        nav {
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        nav .inner {
+            width: 1000px;
+            height: 200px;
+            background-color: blue;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        nav .inner .menubar {
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            display: flex;
+        }
+
+        .item_name {
+            padding: 10px 20px 35px 20px;
+        }
+
+        .item_name:hover {
+            padding: 10px 20px 35px 20px;
+            background-color: brown;
+            border-radius: 5px 5px 0px 0px;
+        }
+
+        .menu .item_contents {
+            height: 200px;
+            background-color: blueviolet;
+            position: fixed;
+            left:0px;
+            width: 100%;  
+            display: none;          
+        }
+
+        .menu:hover .item_contents {            
+            display: block;          
+        }
+
+        .item_contents .contents1{
+            height: 150px;
+            background-color: rgb(153, 17, 17);           
+
+        }
+        .item_contents .contents2{
+            height: 50px;
+            background-color: rgb(15, 174, 103);           
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="inner">
+
+            <ul class="menubar">
+
+                <li class="menu">
+                    <!-- 상위메뉴-->
+                    <div class="item_name"> 커피</div>
+
+                    <!--  하위 풀메뉴 , 숨김-->
+                    <div class="item_contents">
+                      
+                        <div class="contents1"></div>
+                        <div class="contents2"></div>
+                        
+                    </div>
+                </li>
+
+
+                <li class="menu">
+                    <!-- 상위메뉴-->
+                    <div class="item_name"> 케잌</div>
+
+                    <!--  하위 풀메뉴 , 숨김-->
+                    <div class="item_contents">
+                        
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </nav>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function jackpot(){
+        let names=[ '강병준' , '김민아' ,  '김선명', '김세희' , '박근현' , '박민주' , '박인혜' , '박준성' , '박혜리', '윤성혁' , '이광일' , '이소민' , '이승원' , '이유진' ,'이정현' ,'장의수', '정헌조' ,'조원근' ,  '차수민', '최범준' , '최인호' , '홍정원'] ;
+
+        //4명 , 간식먹을 사람 4명
+        let number, numberInt;
+        number = Math.random()*22;
+        numberInt = Math.floor(number);
+        alert(names[numberInt]);
+
+        number = Math.random()*22;
+        numberInt = Math.floor(number);
+        alert(names[numberInt]);
+
+        number = Math.random()*22;
+        numberInt = Math.floor(number);
+        alert(names[numberInt]);
+
+        number = Math.random()*22;
+        numberInt = Math.floor(number);
+        alert(names[numberInt]);
+
+        
+        }
+    </script>
+    <button onclick="jackpot"></button>
+</body>
+</html>

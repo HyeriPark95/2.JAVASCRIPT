@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        ul{
+            list-style: none;
+        }
+        .menubar{           
+            display: flex;
+        }
+
+        .menubar .menu{
+            width: 120px;   /* 상위메뉴  크기지정 */
+            border: 1px solid black;            
+        }
+
+        .menubar .menu ul{
+            display: none;
+        }
+        .menubar .menu:hover ul{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <ul class="menubar">
+        <li  class="menu">농수산
+            <!-- 숨김메뉴 ...하위메뉴-->
+            <ul>
+                <li>쌀</li>
+                <li>보리</li>
+            </ul>
+        </li>
+        <li  class="menu">간식
+               <!-- 숨김메뉴 ...하위메뉴-->
+            <ul>
+                <li>달고나</li>
+                <li>뻥튀기</li>
+            </ul>
+        </li>
+        <li  class="menu">음료
+               <!-- 숨김메뉴 ...하위메뉴-->
+            <ul>
+                <li>콜라</li>
+                <li>사이다</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

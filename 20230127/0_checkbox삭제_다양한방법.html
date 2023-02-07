@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //🔴그냥 본인 삭제 remove
+        function del1(){
+            let checkboxs =document.querySelectorAll("#check1 input[type='checkbox']")
+            // alert(checkboxs.length);
+            for(i=0 ; i<checkboxs.length ; i++){
+                let checkbox= checkboxs[i];
+                if(checkbox.checked==true){
+                    checkbox.remove(); //📌
+                }
+            }
+        }
+
+        //🔴parentNode로 부모와의 연결끈 찾아 연결끊기
+        function del2(){
+            let checkboxs =document.querySelectorAll("#check2 input[type='checkbox']")
+            // alert(checkboxs.length);
+            for(i=0 ; i<checkboxs.length ; i++){
+                let checkbox= checkboxs[i];
+                if(checkbox.checked==true){
+                    checkbox.parentNode.removeChild(checkbox); //📌
+                }
+            }
+        }
+
+        //🔴parentElement로 부모 찾아 삭제
+        function del3(){
+            let checkboxs =document.querySelectorAll("#check3 input[type='checkbox']")
+            // alert(checkboxs.length);
+            for(i=0 ; i<checkboxs.length ; i++){
+                let checkbox= checkboxs[i];
+                if(checkbox.checked==true){
+                    checkbox.parentElement.removeChild(checkbox); //📌
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+
+    <div id="check1">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <button onclick="del1()">삭제하기1</button>
+    </div>
+    
+    <div id="check2">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <button onclick="del2()">삭제하기2</button>
+    </div>
+    
+    <div id="check3">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <button onclick="del3()">삭제하기3</button>
+    </div>
+    
+    <div id="check4">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <input type="checkbox" id="">
+        <button onclick="del4()">삭제하기4</button>
+    </div>
+    
+</body>
+</html>

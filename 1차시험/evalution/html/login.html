@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 🚩 */
+        header{
+            position: relative;
+            height: 100px;
+            background-color: rgb(245, 248, 248);
+            /* border: 1px solid red; */
+        }
+        .title{
+            position: absolute;
+            left: 10px;
+            top: 20px;
+        }
+        .search{
+            border: 1px solid gray;
+            position: absolute;
+            right: 10px;
+            bottom: 20px;
+            height: 35px;
+            width: 200px;
+        }
+        .search img{
+            width:40px;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+        }
+        .search input{
+            /* 🚨커서올렸을 때에 라인 없애는 방법 모르겠음 */
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            border: none;
+            width: 150px;
+            height: 30px;
+        }
+        /* 🚩 */
+        nav{
+            height: 40px;
+            padding: 20px;
+            background-color: rgb(232, 243, 243);
+            /* border: 1px solid blue; */
+        }
+        nav a{
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+        }
+        /* 🚩 */
+        .log_wrap{
+            margin: 0 auto;
+            width: 400px;
+            padding: 20px;
+            border: 0.5px solid rgb(234, 222, 222);
+        }
+        .log_img{
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            background-image: url(/images/login_logo.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .log_info{
+            padding: 10px;
+
+        }
+        .log_info input{
+            width: 98%;
+            height: 40px;
+            margin-top: 5px;
+        }
+        .log_info button{
+            width: 100%;
+            height: 50px;
+            background-color: silver;
+            border: 0px;
+            margin-top: 10px;
+        }
+
+        /* 🚩 */
+        footer{
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            background-color: rgb(233, 239, 239);
+            /* border: 1px solid orange; */
+        }
+        .item{
+            width: 33%;
+            height: 60px;
+        }
+    </style>
+    <script>
+        function login_check(){
+            let frm=document.frm;
+            let userId=frm.userId;
+            let userPw=frm.userPw;
+
+            if(userId.value==""){
+                alert("아이디를 입력해주세요");
+                userId.focus();
+            }else if(userPw.value==""){
+                alert("비밀번호를 입력해주세요")
+                userPw.focus();
+            }else{
+                alert("로그인성공")
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <img src="/images/logo.png" alt="">
+        </div>
+        <div class="search">
+            <input type="text">
+            <img src="/images/검색.png" alt="">
+        </div>
+    </header>
+    <nav>
+        <a href="login.html">로그인</a>
+        <a href="joinus.html">회원가입</a>
+        <a href="index.html">홈으로</a>
+    </nav>
+
+    <div class="log_wrap">
+        <div class="log_img">
+
+        </div>
+        <div class="log_info">
+            <form name="frm">
+                <input type="text" id="userId" placeholder="아이디">
+                <input type="password" id="userPw" placeholder="비번">
+                <button type="button" onclick="login_check()">로그인</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="item"><img src="/images/footer_acorn.png" alt=""></div>
+        <div class="item">
+            <p>(주)에이콘이즈 에이콘아카데미(홍대)</p>
+        </div>
+        <div class="item">
+            <p>COPYRIGHT(C) ALL RIGHT RESERVED</p>
+        </div>
+    </footer>
+</body>
+</html>

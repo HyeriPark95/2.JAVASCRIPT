@@ -9,11 +9,12 @@
         function calcAmt(){
             // alert("dd");
 
-            let qtyTag = document.querySelector("#qty");
+            let qtyTag = document.querySelector("#qty");  //값이 아니라 input태그임!!
             let priceTag = document.querySelector("#price");
             let amtTag = document.querySelector("#amt");
 
-            let qty = qtyTag.value;
+            let qty = qtyTag.value;  //안에 있는 값을 가져오려면 value를 사용해줘야 함
+            alert(qty);
             let price = priceTag.value;
 
             amtTag.value = qty*price;
